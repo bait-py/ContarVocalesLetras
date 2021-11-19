@@ -1,0 +1,43 @@
+Private Sub bcomparar_Click()
+    ni = 1
+    ncontletra = 0
+    
+    While ni <= Len(tfrase)
+        MaxLenght = 50
+        If Mid(tfrase.Text, ni, Len(Trim(tletra.Text))) = Trim(tletra.Text) Then
+            ncontletra = ncontletra + 1
+        End If
+        ni = ni + 1
+    Wend
+    elpepe2 = ncontletra
+    MsgBox ("Hay " & elpepe2 & " " & tletra.Text)
+
+End Sub
+
+Private Sub bvocal_Click()
+ ni = 1
+    ncontletra = 0
+    
+    sletras = Me.tfrase.Text
+    sletra = Me.tletra.Text
+    While ni <= Len(tfrase)
+        If Mid(tfrase.Text, ni, 1) = "a" Then
+            ncontletra = ncontletra + 1
+        End If
+        If Mid(tfrase.Text, ni, 1) = "e" Then
+            ncontletra = ncontletra + 1
+        End If
+        If Mid(tfrase.Text, ni, 1) = "i" Then
+            ncontletra = ncontletra + 1
+        End If
+        If Mid(tfrase.Text, ni, 1) = "o" Then
+            ncontletra = ncontletra + 1
+        End If
+        If Mid(tfrase.Text, ni, 1) = "u" Then
+            ncontletra = ncontletra + 1
+        End If
+        ni = ni + 1
+    Wend
+MsgBox ("Hay " & ncontletra & " vocales")
+
+End Sub
